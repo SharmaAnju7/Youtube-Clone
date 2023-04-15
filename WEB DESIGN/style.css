@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    background-color: #f0f0f0;
+}
+/*anchor tag  */
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+
+}
+/* Images add  applicable for all wepages*/
+img{
+    cursor:pointer;
+}
+.flex-div{
+    display:flex;
+    align-items: center;
+}
+nav{
+    padding: 10px 2%;/*10px from top and bottom and 2% for left and right*/
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    position:sticky; /*not scolling top index*/
+    top: 0;
+    z-index: 10;
+}
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+}
+/* to make image radius as circular as well as size increment*/
+.nav-right .user-icon{
+    width:35px;
+    border-radius: 50%;
+    margin-right: 0;
+}
+.nav-left .menu-icon{
+    width:22px;
+    margin-right: 25px;
+}
+/*to reduce logo size*/
+.nav-left .logo{
+    width: 130px;
+    /*for making alignment perfect for menu icon and logo*/ 
+}
+/*for mic-icon*/
+ .mic-icon{
+    width: 16px;
+}
+/*for search-box*/
+.nav-middle .search-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding:8px 12px;
+    border-radius: 25px;
+}
+.nav-middle .search-box input{
+    width: 400px;
+    border:0px;
+    outline: 0px;
+    background: transparent;
+}
+.nav-middle .search-box img{
+    width: 15px; 
+}
+/*=---------------for dropdown menu in user-------------*/
+.profile-card{
+    position: absolute;
+    right:50px;
+    top: 60px;;
+    width: 300px;
+    max-height: 0px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all .5s;
+}
+.user-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.profile-card .user-img h1{
+    color: #696969;
+    font-size: large;
+}
+.user-img img{
+    width:50px;
+    border-radius: 50px;
+    margin:0 20px;
+    cursor: pointer;
+    margin-left: 0;
+}
+.profile-card hr{
+    width: 90%;
+    margin: auto;
+}
+.col-6{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 8px 0;
+    padding: 3px 20px;
+    transition: all .5s;
+}
+.col-6:hover{
+    background-color: #efeaeaee;
+    transform: translate(3px);
+}
+.col-6 a{
+    text-decoration: none;
+    color: #5a5a5a;
+    width: 100%;
+    margin: 12px 0;
+    margin-left: 10px;
+    display: block;
+}
+.col-6 img{
+    width: 25px;
+    cursor: pointer;
+}
+.display{
+    max-height: 400px;
+}
+/* ---------------------------    SIDEBAR    -----------------------------*/
+.sidebar{
+    background: #ffff;
+    width:15%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    padding-right:10px ;
+    padding-left: 2%;
+    padding-top:80px;
+    min-width:250;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+
+}
+.sidebar::-webkit-scrollbar{
+    display: none;
+  }
+.links a img{
+    width:20px;
+    margin-right: 20px;
+}
+.links a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+/*to change the color in home text first-child select the first anchor tag*/
+.links a:first-child{
+    color:red;
+}
+/*--------------for horizontal line----------------*/
+.sidebar hr{
+    border: 0.5;
+    height: 1px;
+    background: #ccc;
+    width:95%;
+    
+}
+.subscribed-list h3{
+    font-size:13px;
+    margin:20px 0;
+    color:#5a5a5a
+}
+.subscribed-list a{
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+.subscribed-list a img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+/* main content starts here */
+.content {
+    position:fixed;
+    left: 190px;
+    width:calc(100% - 200px);
+    padding: 0 10px;
+    top: 50px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .content::-webkit-scrollbar{
+    display: none;
+  }
+.chip{
+    margin: 12px 6px;
+    background-color: #f0f0f0;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #fff;
+    transition:.5s;
+    flex-grow: 1;
+    color: #242424;
+  }
+  .content .chip:first-child{
+    color: #fff;
+    background: #242424;
+  }
+  .container{
+    padding-left: 15.9%;
+    padding-right: 2%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: #fff;
+  }
+  .list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap:5px;
+    grid-row-gap:30px;
+    margin-top: 15px;
+  }
+  .vid-list .thumbnail{
+    width: 100%;
+    border-radius:5px;
+  }
+  .vid-list .flex-div{
+    align-items: flex-start;
+    margin-top: 7px;
+  }
+  .vid-list .flex-div img{
+    width:35px;
+    margin-right: 10px;
+    border-radius: 50px;
+  }
+  .vid-info{
+    color:#5a5a5a;
+    font-size:13px;
+
+  }
+  .vid-info a{
+    color:#000;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+
+
